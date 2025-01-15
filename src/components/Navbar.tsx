@@ -11,7 +11,7 @@ const Navbar = () => {
 
 	return (
 		<div className="flex justify-between ">
-			<span className="text-3xl font-extrabold font-mono">UpSkill Classes</span>
+			<span className="text-xl font-extrabold">UpSkill Communication Mentor</span>
 			<DropdownMenu>
 				<DropdownMenuTrigger className="outline-none">
 					<img
