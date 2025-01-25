@@ -80,11 +80,11 @@ const Chatbot = () => {
 				);
 			} else {
 				return (
-					<div className="text-center">
-						<h2 className="text-2xl font-bold text-blue-600 mb-4">
+					<div className="text-center px-4">
+						<h2 className="text-2xl md:text-xl sm:text-lg font-bold text-blue-600 mb-4">
 							Evaluation in progress...
 						</h2>
-						<p className="text-gray-600 mb-8">
+						<p className="text-gray-600 mb-8 md:text-sm">
 							Please wait while we evaluate the call.
 						</p>
 					</div>
@@ -93,8 +93,8 @@ const Chatbot = () => {
 		}
 
 		return (
-			<div className="flex-1 flex flex-col justify-center">
-				<h1 className="text-3xl font-bold text-blue-500 my-auto ">
+			<div className="flex-1 flex flex-col justify-center px-4">
+				<h1 className="text-3xl md:text-2xl sm:text-xl font-bold text-blue-500 my-auto text-center">
 					Select Communication Partner
 				</h1>
 				<Select
@@ -108,7 +108,7 @@ const Chatbot = () => {
 						}
 					}}
 				>
-					<SelectTrigger className="p-6 shadow-sm border-gray-200 hover:border-blue-400 transition-colors">
+					<SelectTrigger className="p-6 md:p-4 sm:p-3 shadow-sm border-gray-200 hover:border-blue-400 transition-colors">
 						<SelectValue placeholder="Select the voice for the assistant" />
 					</SelectTrigger>
 					<SelectContent>
@@ -126,7 +126,7 @@ const Chatbot = () => {
 					onClick={handleCallStart}
 					size="lg"
 					disabled={isStartDisabled}
-					className={`mt-10 text-lg w-full mb-auto ${
+					className={`mt-10 md:mt-6 text-lg md:text-base w-full mb-auto ${
 						isStartDisabled
 							? "bg-gray-300"
 							: "bg-gradient-to-r from-blue-500 to-indigo-500"
@@ -139,9 +139,9 @@ const Chatbot = () => {
 	};
 
 	return (
-		<div className="col-span-2 rounded-md  border-2 shadow-sm py-2 px-8 flex gap-4 flex-col justify-center h-[500px] bg-white">
+		<div className="col-span-2 rounded-md border-2 shadow-sm py-2 px-8 md:px-4 sm:px-2 flex gap-4 flex-col justify-center h-[500px] md:h-[400px] bg-white">
 			{error && (
-				<div className="bg-red-50 text-red-500 p-4 rounded-md mb-4">
+				<div className="bg-red-50 text-red-500 p-4 md:p-3 sm:p-2 rounded-md mb-4 text-sm">
 					{error}
 				</div>
 			)}
