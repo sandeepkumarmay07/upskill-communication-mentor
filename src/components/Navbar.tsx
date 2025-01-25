@@ -1,37 +1,19 @@
-// import {
-// 	DropdownMenu,
-// 	DropdownMenuContent,
-// 	DropdownMenuItem,
-// 	DropdownMenuTrigger,
-// } from "./ui/dropdown-menu";
+import { logo } from "@/assets";
 import { Button } from "./ui/button";
-import { useUser } from "@/contexts/UserContext";
+import { ArrowLeft } from "lucide-react";
 
 const Navbar = () => {
-	const {user, setUser} = useUser();
-
-	const handleSignOut = () => {
-		setUser(null);
-	}
+	const handleRedirect = () => {
+		window.location.href = "https://upskillclasses.com";
+	};
 
 	return (
-		<div className="flex justify-between ">
-			<span className="text-xl font-extrabold">UpSkill Communication Mentor</span>
-			{/* <DropdownMenu>
-				<DropdownMenuTrigger className="outline-none">
-					<img
-						className="w-12 h-12 rounded-full "
-						src={user?.imageUrl}
-						alt="user image"
-					/>
-				</DropdownMenuTrigger>
-				<DropdownMenuContent>
-					<DropdownMenuItem>
-						<SignOutButton>Sign Out</SignOutButton>
-					</DropdownMenuItem>
-				</DropdownMenuContent> */}
-			{/* </DropdownMenu> */}
-			{user && <Button onClick={handleSignOut}>Sign Out</Button>}
+		<div className="flex justify-between items-center ">
+			<img className="w-16 scale-[2]" src={logo} alt="" />
+			<Button variant="outline" onClick={handleRedirect} size="lg" className="">
+				<ArrowLeft className="w-6 h-6" />
+				UpSkillClasses
+			</Button>
 		</div>
 	);
 };

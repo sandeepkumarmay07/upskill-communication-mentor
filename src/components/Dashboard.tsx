@@ -17,13 +17,7 @@ const UserInfoPopup = ({ onSubmit }: { onSubmit: (name: string, email: string) =
 	return (
 		<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
 			<div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full">
-				<div className="inline-flex w-fit items-center rounded-full border px-4 py-2 text-sm mb-4 bg-blue-50 border-blue-200 text-blue-900">
-					<span className="relative flex h-2 w-2 mr-2">
-						<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-						<span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-					</span>
-					Get Started
-				</div>
+				
 
 				<h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-2">
 					Welcome to
@@ -61,7 +55,7 @@ const UserInfoPopup = ({ onSubmit }: { onSubmit: (name: string, email: string) =
 						type="submit"
 						className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transform hover:scale-[1.02] transition-all duration-300 ease-in-out"
 					>
-						Start Your Journey
+						Start Talking
 					</button>
 				</form>
 			</div>
@@ -86,8 +80,8 @@ const Dashboard = () => {
 			<div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-4 py-8 min-h-screen">
 				<Navbar />
 				<div className="mt-10 sm:mt-6">
-					<p className="text-5xl md:text-4xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-800">
-						Welcome, {user.name}
+					<p className="text-5xl pb-2 md:text-4xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-800">
+						Welcombe, {user.name}
 					</p>
 					<div className="w-full grid grid-cols-3 gap-6 mt-10 lg:grid-cols-2 md:grid-cols-1">
 						<Chatbot />

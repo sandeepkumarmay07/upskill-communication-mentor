@@ -29,14 +29,14 @@ const CallSummary: React.FC<CallSummaryProps> = ({
 					</TabsTrigger>
 				</TabsList>
 				<TabsContent value="callSummary">
-					<div className="text-sm h-44 sm:h-36 overflow-y-auto w-full rounded-md scrollbar p-4 sm:p-2 border scrollbar-hide prose-stone prose-md">
+					<div className="text-sm h-48 md:h-72  overflow-y-auto w-full rounded-md scrollbar p-4 sm:p-2 border scrollbar-hide prose-stone prose-md">
 						<pre className="text-wrap bg-white text-black font-primary whitespace-pre-wrap">
 							{callDetails.summary}
 						</pre>
 					</div>
 				</TabsContent>
 				<TabsContent value="successEvaluation">
-					<div className="text-sm h-44 sm:h-36 overflow-y-auto w-full rounded-md scrollbar p-4 sm:p-2 border scrollbar-hide prose-stone prose-md">
+					<div className="text-sm h-48 md:h-72  overflow-y-auto w-full rounded-md scrollbar p-4 sm:p-2 border scrollbar-hide prose-stone prose-md">
 						<pre className="text-wrap bg-white text-black font-primary whitespace-pre-wrap">
 							{callDetails.successEvaluation}
 						</pre>
