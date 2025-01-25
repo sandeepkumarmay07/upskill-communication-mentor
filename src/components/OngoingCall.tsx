@@ -7,10 +7,10 @@ import { Button } from "./ui/button";
 const OngoingCall = ({ handleCallEnd }: { handleCallEnd: () => void }) => {
 	return (
 		<Fade cascade>
-			<p className="text-center font-bold text-blue-400 text-xl">
+			<p className="text-center font-bold text-blue-400 text-xl sm:text-lg">
 				Your call has started.
 			</p>
-			<div className="">
+			<div className="scale-75 sm:scale-50">
 				<Lottie
 					width={330}
 					options={{
@@ -23,7 +23,7 @@ const OngoingCall = ({ handleCallEnd }: { handleCallEnd: () => void }) => {
 			<Button
 				onClick={handleCallEnd}
 				size="lg"
-				className="text-lg bg-gradient-to-r from-red-600 to-pink-600 w-full"
+				className="text-lg sm:text-base bg-gradient-to-r from-red-600 to-pink-600 w-full"
 			>
 				End Call
 			</Button>

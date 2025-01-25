@@ -11,6 +11,6 @@ export default async function middleware(req) {
     return Response.redirect(new URL("https://www.upskillclasses.com", req.url));
   }
 
-  // Pass through the request if referer is valid
+  
   return null;
 }

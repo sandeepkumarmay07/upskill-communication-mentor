@@ -8,7 +8,7 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import { useChatbot } from "@/hooks/useChatbot";
-// import { useUser } from "@clerk/clerk-react";
+
 import { useEffect } from "react";
 import CallSummary from "./CallSummary";
 import { useUser } from "@/contexts/UserContext";
@@ -139,9 +139,9 @@ const Chatbot = () => {
 	};
 
 	return (
-		<div className="col-span-2 rounded-md border-2 shadow-sm py-2 px-8 md:px-4 sm:px-2 flex gap-4 flex-col justify-center h-[500px] md:h-[400px] bg-white">
+		<div className="col-span-2 lg:col-span-full rounded-md border-2 shadow-sm py-6 px-6 sm:px-3 flex gap-4 flex-col justify-center bg-white min-h-[400px]">
 			{error && (
-				<div className="bg-red-50 text-red-500 p-4 md:p-3 sm:p-2 rounded-md mb-4 text-sm">
+				<div className="bg-red-50 text-red-500 p-4 sm:p-2 rounded-md mb-4 text-sm">
 					{error}
 				</div>
 			)}
