@@ -1,18 +1,15 @@
-import { SignedIn, SignedOut } from "@clerk/clerk-react";
-import Chat from "./components/Dashboard";
-import Landing from "./components/Landing";
+import Dashboard from "./components/Dashboard";
 
 const App = () => {
-
 	return (
-		<>
-			<SignedIn>
-				<Chat />
-			</SignedIn>
-			<SignedOut>
-				<Landing />
-			</SignedOut>
-		</>
+		// <>
+		// 	<SignedIn>
+				<Dashboard />
+			// </SignedIn>
+			// <SignedOut>
+			// 	<Landing />
+			// </SignedOut>
+		// </>
 	);
 };
 

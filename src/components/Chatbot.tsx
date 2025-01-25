@@ -8,9 +8,10 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import { useChatbot } from "@/hooks/useChatbot";
-import { useUser } from "@clerk/clerk-react";
+// import { useUser } from "@clerk/clerk-react";
 import { useEffect } from "react";
 import CallSummary from "./CallSummary";
+import { useUser } from "@/contexts/UserContext";
 
 const Chatbot = () => {
 	const { user } = useUser();
@@ -36,7 +37,8 @@ const Chatbot = () => {
 				const payload = {
 					message: {
 						...callDetails,
-						email: user?.emailAddresses[0].emailAddress,
+						// email: user?.emailAddresses[0].emailAddress,
+						email: user?.email,
 					},
 				};
 				const response = await fetch(import.meta.env.VITE_MAKE_URL, {

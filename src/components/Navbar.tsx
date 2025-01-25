@@ -1,18 +1,23 @@
-import { SignOutButton, useUser } from "@clerk/clerk-react";
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+// import {
+// 	DropdownMenu,
+// 	DropdownMenuContent,
+// 	DropdownMenuItem,
+// 	DropdownMenuTrigger,
+// } from "./ui/dropdown-menu";
+import { Button } from "./ui/button";
+import { useUser } from "@/contexts/UserContext";
 
 const Navbar = () => {
-	const { user } = useUser();
+	const {user, setUser} = useUser();
+
+	const handleSignOut = () => {
+		setUser(null);
+	}
 
 	return (
 		<div className="flex justify-between ">
 			<span className="text-xl font-extrabold">UpSkill Communication Mentor</span>
-			<DropdownMenu>
+			{/* <DropdownMenu>
 				<DropdownMenuTrigger className="outline-none">
 					<img
 						className="w-12 h-12 rounded-full "
@@ -24,8 +29,9 @@ const Navbar = () => {
 					<DropdownMenuItem>
 						<SignOutButton>Sign Out</SignOutButton>
 					</DropdownMenuItem>
-				</DropdownMenuContent>
-			</DropdownMenu>
+				</DropdownMenuContent> */}
+			{/* </DropdownMenu> */}
+			{user && <Button onClick={handleSignOut}>Sign Out</Button>}
 		</div>
 	);
 };
