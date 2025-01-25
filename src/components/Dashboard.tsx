@@ -17,13 +17,6 @@ const UserInfoPopup = ({ onSubmit }: { onSubmit: (name: string, email: string) =
 	return (
 		<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
 			<div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full">
-				<div className="inline-flex w-fit items-center rounded-full border px-4 py-2 text-sm mb-4 bg-blue-50 border-blue-200 text-blue-900">
-					<span className="relative flex h-2 w-2 mr-2">
-						<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-						<span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-					</span>
-					Get Started
-				</div>
 
 				<h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-2">
 					Welcome to
