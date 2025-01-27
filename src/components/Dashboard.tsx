@@ -81,7 +81,7 @@ const Dashboard = () => {
 				<Navbar />
 				<div className="mt-10 sm:mt-6">
 					<p className="text-5xl pb-2 md:text-4xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-800">
-						Welcombe, {user.name}
+						Welcome , {user.name}
 					</p>
 					<div className="w-full grid grid-cols-3 gap-6 mt-10 lg:grid-cols-2 md:grid-cols-1">
 						<Chatbot />
